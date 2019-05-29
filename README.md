@@ -46,6 +46,14 @@ through it and then it magically starts to work. You can see why I suspect this 
 does not survive the reboot (which user PATH generally does but maybe something wonky is going on with working around its length issue
 which makes it unstable across reboots).
 
-Maybe the solution is to install NVM for all users (I am the only user of this computer). But then agian, can I even do that?
+I thought maybe the solution is to install NVM for all users (I am the only user of this computer), but there is no such option in the
+installer. So for now, the reinstall-NVM solution works and I will have to do this monkey dance after each reboot. Which is not that
+often so it's not bothersome enough to actually solve it yet.
 
-- [ ] Find out
+In the future, I might try to:
+
+- `nvm uninstall` followed by `nvm install` of the same version to change the binary of Node and NPM
+  - You can tell this worked by the OS prompting you to give the binary network access again, after which `npm start` works again
+  - Right now this is what the NVM reinstall sort of does I think, because I installed in different PATH so the binary was different, too
+- Uninstalling NVM and installing Node directly to see if that fixes it, because right now I just need one version
+- Abandoning web development in favor of moving to a cabin in the Alps with a nice fireplace, a lot of books and no people
