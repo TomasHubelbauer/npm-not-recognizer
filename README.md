@@ -63,3 +63,8 @@ you then open PowerShell proper and run the same command there, it works! Amazin
 all equivalent. I'm at loss at what could be causing this and I _still_ don't know how to fix the PowerShell in the VS Code terminal
 so that it picks up the working NPM without reinstalling Node/NPM/NVM, but at least now I have a way to avoid 15 minutes of reinstalling
 shit every morning.
+
+I have dumped `$Env:Path` in the VS Code terminal and in PowerShell to two different files and indeed the VS Code terminal one is _way_
+different. It has many many more entries and a load of duplicates, too.
+
+I created a VS Code issue for this: https://github.com/microsoft/vscode/issues/74606
