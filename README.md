@@ -50,10 +50,8 @@ I thought maybe the solution is to install NVM for all users (I am the only user
 installer. So for now, the reinstall-NVM solution works and I will have to do this monkey dance after each reboot. Which is not that
 often so it's not bothersome enough to actually solve it yet.
 
-In the future, I might try to:
+Uninstalling and installing using NVM again changes the binary, but still won't work.
 
-- `nvm uninstall` followed by `nvm install` of the same version to change the binary of Node and NPM
-  - You can tell this worked by the OS prompting you to give the binary network access again, after which `npm start` works again
-  - Right now this is what the NVM reinstall sort of does I think, because I installed in different PATH so the binary was different, too
-- Uninstalling NVM and installing Node directly to see if that fixes it, because right now I just need one version
-- Abandoning web development in favor of moving to a cabin in the Alps with a nice fireplace, a lot of books and no people
+I tried to uninstall NVM completely and instead just install LTS Node. That worker after restarting VS Code, but it remaings to be seen
+whether it will still work after a restart. And this is yet another indication that has to do with PATH, because restarting VS Code
+refreshes the internal terminal environment variables I think.
