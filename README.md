@@ -55,3 +55,11 @@ Uninstalling and installing using NVM again changes the binary, but still won't 
 I tried to uninstall NVM completely and instead just install LTS Node. That worker after restarting VS Code, but it remaings to be seen
 whether it will still work after a restart. And this is yet another indication that has to do with PATH, because restarting VS Code
 refreshes the internal terminal environment variables I think.
+
+---
+
+Updates! This is actually a problem with… VS Code! How, I still don't know, but: when this error runs in the VS Code terminal, but
+you then open PowerShell proper and run the same command there, it works! Amazingly, `node -v`, `npm -v` and `get-command npm` are
+all equivalent. I'm at loss at what could be causing this and I _still_ don't know how to fix the PowerShell in the VS Code terminal
+so that it picks up the working NPM without reinstalling Node/NPM/NVM, but at least now I have a way to avoid 15 minutes of reinstalling
+shit every morning.
