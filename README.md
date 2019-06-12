@@ -67,4 +67,20 @@ shit every morning.
 I have dumped `$Env:Path` in the VS Code terminal and in PowerShell to two different files and indeed the VS Code terminal one is _way_
 different. It has many many more entries and a load of duplicates, too.
 
-I created a VS Code issue for this: https://github.com/microsoft/vscode/issues/74606
+---
+
+Yo yo yo, new developments.
+
+This issue is not a VS Code issue as I initially thoguht, because it happened for me in regular PowerShell also.
+
+I was using the Node.js command prompt (comes pre-seeded with the correct Node and NPM in PATH) and that worked okay,
+except I couldn't have it in the VS Code terminal. And it crapped once or twice, too.
+
+What I noticed though was that the problem was when something else was calling Node/NPM/binaries from `node_modules`, not the
+terminal directly. Because in the terminal like I said above, `-v` always worked.
+
+With CRA, this is `npm start` - it does `react-scripts start` and `react-scripts` was not found which was the issue.
+
+I figured I could just use `npx react-scripts start` in the terminal and it would use the `react-scripts` from `node_modules` and
+that works as expected. I still don't know why my PATH is fucked beyond repair, but I also read that on Windows, path is not so
+simple as registries have something to do with it and stuff. I really don't care as long as this method keeps working.
