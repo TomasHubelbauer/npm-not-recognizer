@@ -84,3 +84,9 @@ With CRA, this is `npm start` - it does `react-scripts start` and `react-scripts
 I figured I could just use `npx react-scripts start` in the terminal and it would use the `react-scripts` from `node_modules` and
 that works as expected. I still don't know why my PATH is fucked beyond repair, but I also read that on Windows, path is not so
 simple as registries have something to do with it and stuff. I really don't care as long as this method keeps working.
+
+---
+
+WTF, updating to Windows 10 May 2019 update seems to have fixed this? My guess is this was a problem with PowerShell that maybe not
+always presented and they quashed that bug for this update. Can't tell, it might come back, but for now it works and I can again use
+the integrated terminal in VS Code.
